@@ -1,0 +1,4 @@
+insert into times 
+    (time,link_imagem)
+values 
+    ('nome_do_time','link_da_logo');

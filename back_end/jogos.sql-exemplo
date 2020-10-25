@@ -1,0 +1,9 @@
+insert into users
+    (email, senha)
+values
+    ('xxx@gmail.com', 'senhaHash');
+
+insert into jogos
+    (time_casa, gols_casa, gols_visitante, time_visitante, rodada)
+values
+    ('timeA', golsA, golsB, 'timeB', rodada);

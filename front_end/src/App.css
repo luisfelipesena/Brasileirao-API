@@ -1,0 +1,419 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Sora", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+button {
+  cursor: pointer;
+}
+
+.main {
+  flex: 1;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  background-color: rgb(236, 235, 220);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  max-height: 70px;
+  background-color: #2b7148;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 2em;
+  transition: 0.4s;
+}
+
+.header:hover {
+  box-shadow: 0px 0px 15px red;
+}
+
+.conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 1 1200px;
+}
+
+.page-landing {
+  flex: 0 1 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.conteudo .logoBr {
+  max-width: 50px;
+}
+
+.conteudo h1 {
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.direita {
+  margin-left: 2em;
+}
+
+.direita form {
+  display: flex;
+  align-items: center;
+}
+
+.direita form > label {
+  margin-right: 2.5em;
+}
+
+.direita form span {
+  font-size: 1em;
+  font-weight: lighter;
+  color: white;
+  margin-right: 0.5em;
+}
+
+.direita form input {
+  border: 2px solid transparent;
+  padding: 0.3em 0.5em;
+  border-radius: 0.3em;
+  transition: 0.5s;
+}
+
+.direita form input:hover {
+  box-shadow: 0px 5px 0px 0px red;
+}
+
+.direita form input:focus {
+  box-shadow: 0px 5px 0px 0px blue;
+}
+
+.direita form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 0.3em;
+  height: 2em;
+  color: white;
+  background-color: #04375c;
+  padding: 1em 2em;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.direita form button:hover {
+  box-shadow: 0px 5px 0px 0px red;
+}
+
+.direita form button:focus {
+  box-shadow: 0px 5px 0px 0px blue;
+}
+
+.colunas {
+  display: flex;
+  justify-content: center;
+  padding: 2em;
+}
+
+.centro {
+  width: 100%;
+  flex: 0 1 1200px;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+
+.centro .jogos {
+  display: flex;
+  flex-flow: column;
+  flex: 0 1 432px;
+  max-width: 465px;
+  margin-bottom: 2em;
+}
+
+.centro .jogos .cabecalho {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(138, 185, 157);
+}
+
+.centro .jogos .cabecalho button {
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.centro .jogos .cabecalho button:nth-child(1):hover {
+  transform: rotate(360deg);
+}
+
+.centro .jogos .cabecalho button:nth-child(3):hover {
+  transform: rotate(360deg);
+}
+
+.jogosRodada {
+  background-color: white;
+}
+
+.centro .jogos .jogosRodada table {
+  margin-left: 13px;
+  width: 100%;
+}
+
+.centro .jogos .jogosRodada table tr td:first-child {
+  text-align: right;
+}
+
+.carregando {
+  text-align: center !important;
+}
+
+.centro .jogos .jogosRodada table tr td {
+  padding: 0.5em;
+}
+
+.centro .jogos .jogosRodada .gols {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.centro .jogos .jogosRodada table input {
+  width: 26px;
+  height: 38px;
+  font-size: 0.8em !important;
+}
+
+.centro .jogos .jogosRodada button {
+  margin-left: -1em;
+  display: flex;
+  align-items: center;
+  border: 0;
+  border-radius: 50%;
+  background-color: rgb(138, 185, 157);
+  padding: 0.1em;
+}
+
+.tabela tr,
+.jogosRodada td {
+  border-bottom: 1px solid rgb(236, 235, 220);
+}
+
+.jogosRodada td:nth-child(8),
+.jogosRodada td:nth-child(9) {
+  border-bottom: 0;
+}
+
+.tabela {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  flex: 0 1 719px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+thead {
+  font-size: 1.2em;
+  background-color: rgb(138, 185, 157);
+}
+
+thead tr th {
+  padding: 0.2em;
+}
+
+thead tr th span {
+  text-decoration: underline dotted;
+}
+
+.posicao,
+.time {
+  text-decoration: none;
+}
+
+.time {
+  text-align: left;
+}
+
+thead tr button {
+  margin-left: 0.8em;
+  background-color: transparent;
+  border: 0;
+  transition: 0.3s;
+}
+
+thead tr img {
+  max-height: 1.3em;
+}
+
+thead tr button:hover {
+  transform: rotate(360deg);
+}
+
+thead tr button:focus {
+  transform: rotate(0);
+}
+
+.tabela tbody {
+  background-color: white;
+}
+
+.tabela tbody tr td {
+  padding-top: 0.3em;
+  padding-right: 0.5em;
+}
+
+.tabela tbody tr td:nth-child(2) {
+  padding-right: 0em;
+}
+
+.tabela tbody tr td:nth-child(1) {
+  padding-right: 1em;
+}
+
+.tabela tbody td {
+  text-align: right;
+}
+
+.quadrados {
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.verdeLiberta,
+.azulPreLiberta,
+.amareloAmericana,
+.vermelhoRebaixamento,
+.permaneceBlock {
+  margin-right: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.verdeLiberta {
+  background-color: #2b7148;
+}
+
+.azulPreLiberta {
+  background-color: #17a2b8;
+}
+
+.amareloAmericana {
+  background-color: #ffbb00;
+}
+
+.vermelhoRebaixamento {
+  background-color: rgb(255, 38, 0);
+}
+
+.permaneceBlock {
+  background-color: black;
+}
+
+.libertadores,
+.prelibertadores,
+.americana,
+.rebaixamento,
+.permanece {
+  display: flex;
+  align-items: center;
+  padding: 0.2em;
+  justify-content: flex-end;
+}
+
+.libertadores {
+  border-left: 3px solid #2b7148;
+}
+
+.prelibertadores {
+  border-left: 3px solid #17a2b8;
+}
+
+.rebaixamento {
+  border-left: 3px solid rgb(255, 38, 0);
+}
+
+.americana {
+  border-left: 3px solid #ff9800;
+}
+
+.permanece {
+  border-left: 3px solid black;
+}
+
+.icones {
+  margin-left: 1em;
+  margin-right: auto;
+  width: 20px;
+  height: 20px;
+}
+
+.footer {
+  color: rgb(236, 235, 220);
+  padding: 1em;
+  width: 100%;
+  background-color: #2b7148;
+  height: 100%;
+  max-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 14px;
+  transition: 0.4s;
+}
+
+.footer:hover {
+  box-shadow: 0px 0px 15px red;
+}
+
+.logos {
+  max-width: 20px;
+  margin: 0.3em -0.5em;
+}
+
+.lider {
+  margin: -0.1em -0.5em -1em -0.5em;
+  max-width: 40px;
+}
+
+.remover {
+  background-color: transparent !important;
+}
+
+.remover img {
+  max-width: 1.4em;
+  margin-right: 1em;
+}
+
+/* Retira setas de rolamento no input type Text */
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
