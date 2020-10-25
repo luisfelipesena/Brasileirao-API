@@ -67,7 +67,10 @@ function EditarRodadas(props) {
           <button
             className="editar"
             onClick={() => {
-              if (
+              if (golsAEstado === "" || golsBEstado === "") {
+                setgolsA(jogo.gols_casa);
+                setgolsB(jogo.gols_visitante);
+              } else if (
                 !isNaN(Number(golsAEstado)) &&
                 !isNaN(Number(golsBEstado)) &&
                 Number(golsAEstado) >= 0 &&
@@ -81,11 +84,6 @@ function EditarRodadas(props) {
                   golsBEstado,
                   logado
                 ).then(() => rodadasTabela(setTabela, setJogosRodada, rodada));
-              }
-
-              if (golsAEstado === "" || golsBEstado === "") {
-                setgolsA(jogo.gols_casa);
-                setgolsB(jogo.gols_visitante);
               }
 
               const newPlacar = { id: null, valor: "caneta" };
